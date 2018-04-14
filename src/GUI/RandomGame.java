@@ -19,7 +19,7 @@ class RandomGame extends JFrame implements ActionListener
     {
         setLayout(new FlowLayout());
 
-        promptLabel = new JLabel("Enter a random number from 1 to 10");
+        promptLabel = new JLabel("Enter a random number from 1 to 100");
         add(promptLabel);
 
         textField = new JTextField(5);
@@ -34,7 +34,7 @@ class RandomGame extends JFrame implements ActionListener
         randomLabel = new JLabel("");
         add(randomLabel);
 
-        randomNum = (int)(Math.random()*10 + 1);
+        randomNum = (int)(Math.random()*100 + 1);
 
         button.addActionListener(this);
 
