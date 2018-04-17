@@ -2,7 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-/* Random number game with GUI */
+/* GUI for complete random number game*/
 
 class RandomGame extends JFrame implements ActionListener
 {
