@@ -8,7 +8,7 @@ import javax.swing.*;
 
 class Calculator extends JFrame{
 
-    JButton add, subtract, multiply, divide;
+    JButton add, subtract, multiply, divide, sqrt;
     JTextField num1, num2;
     JLabel result, enter1, enter2;
 
@@ -69,6 +69,13 @@ class Calculator extends JFrame{
         c.gridy = 2;
         add(divide, c);
 
+        sqrt = new JButton("sqrt");
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.gridx = 0;
+        c.gridy = 3;
+        c.gridwidth = 4;
+        add(sqrt, c);
+
         result = new JLabel("");
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 0;
@@ -81,6 +88,7 @@ class Calculator extends JFrame{
         subtract.addActionListener(a);
         multiply.addActionListener(a);
         divide.addActionListener(a);
+        sqrt.addActionListener(a);
     }
 
     public class event implements ActionListener {
@@ -122,6 +130,7 @@ class Calculator extends JFrame{
                 result.setText(number1 + "x" + number2 + "=" + product);
                 result.setForeground(Color.RED);
             }
+
             else if (op.equals("/")) {
                 if (number2 == 0) {
                     result.setText("Cannot divide by zero!");
@@ -132,6 +141,11 @@ class Calculator extends JFrame{
                     result.setText(number1 + "/" + number2 + "=" + factor);
                     result.setForeground(Color.RED);
                 }
+            }
+            else if (op.equals("sqrt")) {
+                double root = Math.sqrt(number1);
+                result.setText("the square root of " + number1 + " is " + root);
+                result.setForeground(Color.RED);
             }
         }
     }
