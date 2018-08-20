@@ -3,20 +3,20 @@ package Practice_Graphics_Files;
 import java.awt.*;
 import javax.swing.*;
 
-class Frame {
+class Frame2 {
 
     public static void main(String args[]) {
-        new Frame();
+        new Frame2();
 
     }
 
-    public Frame() {
+    public Frame2() {
         JFrame gui = new JFrame();
-        gui.setTitle("Paintings");
-        gui.setSize(300, 300);
+        gui.setTitle("Illusions");
+        gui.setSize(270, 180);
         gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        Painting panel = new Painting();
+        IllusionPanel panel = new IllusionPanel();
 
         Container pane = gui.getContentPane();
         pane.setLayout(new GridLayout(1, 1));
@@ -25,3 +25,4 @@ class Frame {
         gui.setVisible(true);
     }
 }
+
